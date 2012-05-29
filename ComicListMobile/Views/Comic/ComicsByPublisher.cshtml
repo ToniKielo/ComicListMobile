@@ -1,0 +1,15 @@
+﻿@model ComicListMobile.Models.ComicModel
+
+@{
+    ViewBag.Title = "ComicsByPublisher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ComicsByPublisher</h2>
+
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Foo</li>
+    @foreach(var comic in Model.ComicsForWeek) {
+        <li>@comic.Name</li>
+    }
+</ul>
